@@ -1,3 +1,5 @@
+/* BASE */
+
 .base-button{
     margin: 0 auto;
     margin-top: 175px;
@@ -16,9 +18,15 @@
     -webkit-user-select: none;
 }
 
-.with-shadow{
+.shadow{
     box-shadow: 0 10px 22px rgba(0,0,0,0.075), 0 10px 10px rgba(0,0,0,0.02);
 }
+
+.hover-shadow:active{
+    box-shadow: 0 10px 22px rgba(0,0,0,0.075), 0 10px 10px rgba(0,0,0,0.02);
+}
+
+/* BASE COLOURS */
 
 .blue{
     background-color: #1c92ed;

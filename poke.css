@@ -1,8 +1,8 @@
 .base-button{
-	margin: 0 auto;
+    margin: 0 auto;
     margin-top: 175px;
     padding: 20px 46px;
-	border: none;
+    border: none;
     border-radius: 6px;
     display: block;
     background-color: #f9f9f9;
@@ -17,15 +17,15 @@
 }
 
 .with-shadow{
-	box-shadow: 0 10px 22px rgba(0,0,0,0.075), 0 10px 10px rgba(0,0,0,0.02);
+    box-shadow: 0 10px 22px rgba(0,0,0,0.075), 0 10px 10px rgba(0,0,0,0.02);
 }
 
 .blue{
-	background-color: #1c92ed;
-	color: #fff;
+    background-color: #1c92ed;
+    color: #fff;
 }
 
 .grey{
-	background-color: #dedede;
-	color: #aaa;
+    background-color: #dedede;
+    color: #aaa;
 }

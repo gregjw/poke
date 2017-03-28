@@ -18,6 +18,8 @@
     -webkit-user-select: none;
 }
 
+/* BASE VARIANTS */
+
 .b-shadow{
     box-shadow: 0 10px 22px rgba(0,0,0,0.075), 0 10px 10px rgba(0,0,0,0.02);
 }
@@ -30,7 +32,7 @@
     box-shadow: 0 10px 22px rgba(0,0,0,0.075), 0 10px 10px rgba(0,0,0,0.02);
 }
 
-/* BASE COLOURS */
+/* BASE PALETTE */
 
 .b-blue{
     background-color: #1C92ED;

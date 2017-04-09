@@ -1,3 +1,4 @@
+
 /* POKE BASE */
 
 .base-button{
@@ -7,8 +8,8 @@
     border: none;
     border-radius: 6px;
     display: block;
-    background-color: #f9f9f9;
-    color: #fff;
+    background-color: #F9F9F9;
+    color: #FFF;
     font-family: sans-serif;
     font-weight: bolder;
     font-size: 18pt;
@@ -18,16 +19,33 @@
     -webkit-user-select: none;
 }
 
-.with-shadow{
+/* BASE VARIANTS */
+
+.b-shadow{
     box-shadow: 0 10px 22px rgba(0,0,0,0.075), 0 10px 10px rgba(0,0,0,0.02);
 }
 
-.blue{
-    background-color: #1c92ed;
-    color: #fff;
+.b-hover-darken:active{
+   filter: brightness(85%);
 }
 
-.grey{
-    background-color: #dedede;
-    color: #aaa;
+.b-hover-shadow:active{
+    box-shadow: 0 10px 22px rgba(0,0,0,0.075), 0 10px 10px rgba(0,0,0,0.02);
+}
+
+/* BASE PALETTE */
+
+.b-blue{
+    background-color: #1C92ED;
+    color: #FFF;
+}
+
+.b-red{
+    background-color: #FF3C49;
+    color: #FFF;
+}
+
+.b-grey{
+    background-color: #DEDEDE;
+    color: #AAA;
 }

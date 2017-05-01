@@ -20,27 +20,27 @@ You can use Poke via the RawGit CDN: `https://rawgit.com/gregjw/poke/master/poke
 
 
 ```
-	import Poke from './Poke.js';
+import Poke from './Poke.js';
 
-	function App(){
-	  return (
-	    <div>
-	      <Poke type="basic" bgColor="#000" text="Hello"/>
-	      <Poke type="pressable" bgColor="#000" text="Hello"/>
-	      <Poke type="inactive" bgColor="#000" text="Hello"/>
-	    </div>
-	  );
-	}
-
-	render(
-		<App />,
-		document.querySelector('#app')
+function App(){
+	return (
+		<div>
+			<Poke type="basic" bgColor="#000" text="Hello"/>
+			<Poke type="pressable" bgColor="#000" text="Hello"/>
+			<Poke type="inactive" bgColor="#000" text="Hello"/>
+		</div>
 	);
+}
+
+render(
+	<App />,
+	document.querySelector('#app')
+);
 ```
 
 Poke's buttons on you passing an appropriate keyword into the `type` prop.
-These keywords affect how the component gets styled by default.
-
-`basic` - The titular Poke button
-`pressable` - The default skeuomorphically pressable button
-`inactive` - The default inactive button
+These keywords affect how the component gets styled by default.  
+  
+`basic` - The titular Poke button  
+`pressable` - The default skeuomorphically pressable button  
+`inactive` - The default inactive button  

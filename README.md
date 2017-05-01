@@ -23,13 +23,13 @@ You can use Poke via the RawGit CDN: `https://rawgit.com/gregjw/poke/master/poke
 import Poke from './Poke.js';
 
 function App(){
-	return (
-		<div>
-			<Poke type="basic" bgColor="#000" text="Hello"/>
-			<Poke type="pressable" bgColor="#000" text="Hello"/>
-			<Poke type="inactive" bgColor="#000" text="Hello"/>
-		</div>
-	);
+return (
+	<div>
+		<Poke type="basic" text="Hello"/>
+		<Poke type="pressable" text="Hello"/>
+		<Poke type="inactive" text="Hello"/>
+	</div>
+);
 }
 
 render(
@@ -38,7 +38,7 @@ render(
 );
 ```
 
-Poke's buttons on you passing an appropriate keyword into the `type` prop.
+Poke's buttons rely on you passing an appropriate keyword into the `type` prop.  
 These keywords affect how the component gets styled by default.  
   
 `basic` - The titular Poke button  

@@ -1,4 +1,7 @@
-  # Poke
+<div align="center">
+	<img alt="react-poke" src="http://i.imgur.com/jweCl0w.png" height="170px">
+</div>
+
 Poke is a component library specifically for buttons, **built on top of [styled-components](https://github.com/styled-components/styled-components).** 
 
 **Brought to you by [Feather](https://feather-cfm.com) and our design community, [Human Friendly](https://uiux.blog).**

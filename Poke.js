@@ -13,13 +13,15 @@ const BasicButton = styled.button`
 `;
 
 const PressableButton = styled(BasicButton)`
-  background: white;
-  color: palevioletred;
-  transition: 0.25s ease;
-
   &:active{
+    transition: .2s;
     box-shadow: inset 0 0px 5px rgba(0,0,0,.75);
   }
+`;
+
+const InactiveButton = styled(BasicButton)`
+  background: grey;
+  opacity: .2;
 `;
 
 function Button(props) {
@@ -35,6 +37,12 @@ function Button(props) {
         {props.text}
       </PressableButton>
     ); 
+  } else if(props.type == "inactive") {
+    return (
+      <InactiveButton>
+        {props.text}
+      </InactiveButton>
+    );
   }
 }
 

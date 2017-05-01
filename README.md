@@ -23,18 +23,18 @@ You can use Poke via the RawGit CDN: `https://rawgit.com/gregjw/poke/master/poke
 import Poke from './Poke.js';
 
 function App(){
-return (
-	<div>
-		<Poke type="basic" text="Hello"/>
-		<Poke type="pressable" text="Hello"/>
-		<Poke type="inactive" text="Hello"/>
-	</div>
-);
+  return (
+    <div>
+	  <Poke type="basic" text="Hello"/>
+	  <Poke type="pressable" text="Hello"/>
+	  <Poke type="inactive" text="Hello"/>
+    </div>
+  );
 }
 
 render(
-	<App />,
-	document.querySelector('#app')
+  <App />,
+  document.querySelector('#app')
 );
 ```
 

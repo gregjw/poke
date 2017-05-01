@@ -1,5 +1,5 @@
   # Poke
-Poke is a CSS component library specifically for buttons, **built with quicker development speed in mind.** 
+Poke is a component library specifically for buttons, **built with [styled-components](https://github.com/styled-components/styled-components) and quicker development speed in mind.** 
 
 **Brought to you by [Feather](https://feather-cfm.com) and our design community, [Human Friendly](https://uiux.blog).**
 

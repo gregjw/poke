@@ -15,6 +15,24 @@ The ramp for front-end basics is getting shorter to shorter and the team at [Fea
 
 We want to emphasise that Poke is an evolving codebase & completely open design project, please feel free to submit a pull request and contribute your own button sets.
 
-  ## Get started
+  ## Usage
   You can use Poke via the RawGit CDN: `https://rawgit.com/gregjw/poke/master/poke.css`
 
+ 	```
+	  	import Poke from './Poke.js';
+
+		function App(){
+		  return (
+		    <div>
+		      <Poke type="basic" bgColor="#000" text="Hello"/>
+		      <Poke type="pressable" bgColor="#000" text="Hello"/>
+		      <Poke type="inactive" bgColor="#000" text="Hello"/>
+		    </div>
+		  );
+		}
+
+		render(
+		  <App />,
+		  document.querySelector('#app')
+		);
+	```

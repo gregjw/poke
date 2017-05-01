@@ -1,6 +1,4 @@
-<div align="center">
-	<img alt="react-poke" src="http://i.imgur.com/dYXTf04.png" height="170px">
-</div>
+<img alt="react-poke" src="http://i.imgur.com/dYXTf04.png" height="170px">
 <br><br><br>
 
 

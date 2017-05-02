@@ -20,7 +20,7 @@ You can use Poke via the RawGit CDN: `https://rawgit.com/gregjw/poke/master/poke
 
 
 ```
-import Poke from './Poke.js';
+import Poke from './src/Poke.js';
 
 function App(){
   return (

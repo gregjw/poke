@@ -1,6 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
-import Poke from './Poke.js';
+import Poke from './src/Poke.js';
 
 function App(){
   return (

@@ -53,12 +53,12 @@ You can contribute your own sets, Poke currently has 2 available sets:
   
 ## Contributing  
   
-You can easily contribute your own button sets to Poke.  
+**You can easily contribute your own button sets to Poke.**  
   
 ### Naming  
   
-If your button set is called 'Example', please name the file 'PokeExample.js'  
-Always prepend the name 'Poke' to the front of your sets name.  
+If your button set is called `Example`, please name the file `PokeExample.js`  
+Always prepend the name `Poke` to the front of your sets name.  
   
 ### Structure
   

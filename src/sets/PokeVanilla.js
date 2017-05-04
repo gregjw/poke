@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const PrimaryButton = styled.button`
   border: none;  
-  background: palevioletred;
+  background: #2C3979;
   color: white;
   font-size: 1em;
   margin: 1em;
@@ -19,7 +19,7 @@ const PrimaryButton = styled.button`
 `;
 
 const SecondaryButton = styled(PrimaryButton)`
-  background: grey;
+  background: palevioletred;
   opacity: .2;
 `;
 

@@ -1,49 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const BasicButton = styled.button`
-  border: none;  
-  background: palevioletred;
-  color: white;
-  font-size: 1em;
-  margin: 1em;
-  position: relative;
-  padding: 0.75em 2em;
-  border-radius: 3px;
-`;
+import Vanilla from './sets/PokeVanilla.js';
+import Medium from './sets/PokeMedium.js';
 
-const PressableButton = styled(BasicButton)`
-  &:active{
-    transition: .2s;
-    box-shadow: inset 0 0px 5px rgba(0,0,0,.75);
-  }
-`;
-
-const InactiveButton = styled(BasicButton)`
-  background: grey;
-  opacity: .2;
-`;
-
-function Button(props) {
-  if(props.type == "basic"){
+function Poke(props) {
+  if(props.set == "vanilla"){
     return (
-      <BasicButton>
-        {props.text}
-      </BasicButton>
+      <Vanilla type={props.type} text={props.text}/>
     );
-  } else if(props.type == "pressable") {
+  } else if(props.set == "medium"){
     return (
-      <PressableButton>
-        {props.text}
-      </PressableButton>
-    ); 
-  } else if(props.type == "inactive") {
-    return (
-      <InactiveButton>
-        {props.text}
-      </InactiveButton>
+      <Medium type={props.type} text={props.text}/>
     );
   }
 }
 
-export default Button
+export default Poke

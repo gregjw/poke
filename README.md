@@ -25,9 +25,8 @@ import Poke from './src/Poke.js';
 function App(){
   return (
     <div>
-      <Poke type="basic" text="Hello"/>
-      <Poke type="pressable" text="Hello"/>
-      <Poke type="inactive" text="Hello"/>
+      <Poke set="vanilla" state="primary" text="Test"/>
+      <Poke set="medium" state="primary" text="Test"/>
     </div>
   );
 }
@@ -38,9 +37,104 @@ render(
 );
 ```
 
-Poke's buttons rely on you passing an appropriate keyword into the `type` prop.  
-These keywords affect how the component gets styled by default:
+Poke relies on you passing an appropriate keyword into the `state` prop.
+These keywords affects what type of button you get from the set:
   
-`basic` - The titular Poke button  
-`pressable` - The default skeuomorphically pressable button  
-`inactive` - The default inactive button  
+`primary` - The primary button from the button set
+`secondary` - The secondary button from the button set
+`warning` - The warning/danger button from the button set
+`disabled` - The inactive/disabled button from the button set
+
+To specify which set you want to use, just pass along the sets name in the `set` prop.
+You can contribute your own sets, Poke currently has 2 available sets:
+
+`vanilla` - The basic Poke styling
+`medium` - Mimicking the Medium.com button set
+
+## Contributing
+
+You can easily contribute your own button sets to Poke.
+
+### Naming
+
+If your button set is called 'Example', please name the file 'PokeExample.js'
+Always prepend the name 'Poke' to the front of your sets name.
+
+### Structure
+
+Follow a similar structure to the example below.
+Once you've finished your button set, put it in the `src` folder and submit a pull request.
+
+```
+import React from 'react';
+import styled from 'styled-components';
+
+const PrimaryButton = styled.button`
+  border: none;  
+  background: palevioletred;
+  color: white;
+  font-size: 1em;
+  margin: 1em;
+  position: relative;
+  padding: 0.75em 2em;
+  border-radius: 3px;
+`;
+
+const PushButton = styled(PrimaryButton)`
+  transition: .2s;
+
+  &:active{
+    transition: .2s;
+    box-shadow: inset 0 0px 8px rgba(0,0,0,.75);
+  }
+`;
+
+const HoverButton = styled(PrimaryButton)`
+  transition: .2s;
+
+  &:hover{
+    transition: .2s;
+    box-shadow: 0 0px 10px rgba(0,0,0,.75);
+  }
+`;
+
+const DisabledButton = styled(PrimaryButton)`
+  background: grey;
+  opacity: .2;
+`;
+
+function Button(props) {
+  if(props.type == "primary"){
+    return (
+      <PrimaryButton>
+        {props.text}
+      </PrimaryButton>
+    );
+  } else if(props.type == "push") {
+    return (
+      <PushButton>
+        {props.text}
+      </PushButton>
+    ); 
+  }
+}
+
+export default Button
+```
+
+### Extending
+You can easily customise a current set for your needs by using 'styled-components'.
+You can define a new Component and extend a predefined component.
+
+In this example, our predefined component is `PrimaryButton`:
+
+```
+const PushButton = styled(PrimaryButton)`
+  transition: .2s;
+
+  &:active{
+    transition: .2s;
+    box-shadow: inset 0 0px 8px rgba(0,0,0,.75);
+  }
+`;
+```

@@ -10,9 +10,6 @@ const PrimaryButton = styled.button`
   position: relative;
   padding: 0.75em 2em;
   border-radius: 3px;
-`;
-
-const PushButton = styled(PrimaryButton)`
   transition: .2s;
 
   &:active{
@@ -21,7 +18,12 @@ const PushButton = styled(PrimaryButton)`
   }
 `;
 
-const HoverButton = styled(PrimaryButton)`
+const SecondaryButton = styled(PrimaryButton)`
+  background: grey;
+  opacity: .2;
+`;
+
+const WarningButton = styled(PrimaryButton)`
   transition: .2s;
 
   &:hover{
@@ -42,11 +44,23 @@ function Button(props) {
         {props.text}
       </PrimaryButton>
     );
-  } else if(props.type == "push") {
+  } else if(props.type == "secondary") {
     return (
-      <PushButton>
+      <SecondaryButton>
         {props.text}
-      </PushButton>
+      </SecondaryButton>
+    ); 
+  } else if(props.type == "warning") {
+    return (
+      <WarningButton>
+        {props.text}
+      </WarningButton>
+    ); 
+  } else if(props.type == "disabled") {
+    return (
+      <DisabledButton>
+        {props.text}
+      </DisabledButton>
     ); 
   }
 }

@@ -123,7 +123,7 @@ export default Button
 ```
   
 ### Extending  
-You can easily customise a current set for your needs by using 'styled-components'.  
+You can easily customise a current set for your needs by using **styled-components**.  
 You can define a new Component and extend a predefined component.  
   
 In this example, our predefined component is `PrimaryButton`:  

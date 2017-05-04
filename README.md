@@ -40,7 +40,17 @@ render(
   document.querySelector('#app')
 );
 ```
-
+  
+#### Sets  
+  
+To specify which set you want to use, just pass along the sets name in the `set` prop.  
+You can contribute your own sets, Poke currently has 2 available sets:  
+  
+`vanilla` - The basic Poke styling  
+`medium` - Mimicking the Medium.com button set  
+  
+#### States
+  
 Poke relies on you passing an appropriate keyword into the `state` prop.  
 These keywords affects what type of button you get from the set:  
    
@@ -49,11 +59,6 @@ These keywords affects what type of button you get from the set:
 `tertiary` - The tertiary button from the button set   
 `warning` - The warning/danger button from the button set  
   
-To specify which set you want to use, just pass along the sets name in the `set` prop.  
-You can contribute your own sets, Poke currently has 2 available sets:  
-  
-`vanilla` - The basic Poke styling  
-`medium` - Mimicking the Medium.com button set  
   
 ## Contributing  
   
@@ -165,7 +170,7 @@ In this example, our predefined component is `PrimaryButton`:
 const SecondaryButton = styled(PrimaryButton)`
   background: grey;
   opacity: .2;
-  
+
   &:active{
     transition: .2s;
     box-shadow: inset 0 0px 8px rgba(0,0,0,.75);

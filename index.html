@@ -1,25 +1,22 @@
 <html>
 	<head>
-		<title>Poke</title>
+		<title>Poke: Button specific React UI Components</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="I'm a UI/UX developer from the UK, check me out.">
+        <meta name="description" content="Poke's aim is to provide designers & front-end developers with an easy-to-use button toolkit. ">
         <meta name="keywords" content="ui,ux,designer,developer,gregory,worrall">
-        <meta property="og:url"           content="https://gregjw.github.io/" />
+        <meta property="og:url"           content="https://github.com/gregjw/poke" />
         <meta property="og:type"          content="website" />
-        <meta property="og:title"         content="Gregory Worrall" />
-        <meta property="og:description"   content="I'm a UI/UX developer from the UK, check me out."/>
-        <meta property="og:image" content="https://s3-us-west-2.amazonaws.com/feathercfm/assets/personal_card.jpg" />
+        <meta property="og:title"         content="Poke" />
+        <meta property="og:description"   content="Poke's aim is to provide designers & front-end developers with an easy-to-use button toolkit. "/>
+        <meta property="og:image" content="http://i.imgur.com/d21NJPt.png" />
         <meta name="twitter:card" content="summary_large_image">
-        <meta name="twitter:url" content="https://gregjw.github.io/">
+        <meta name="twitter:url" content="https://github.com/gregjw/poke">
         <meta name="twitter:site" content="@gregjwww">
         <meta name="twitter:creator" content="@gregjwww">
-        <meta name="twitter:title" content="Gregory Worrall">
-        <meta name="twitter:description" content="I'm a UI/UX developer from the UK, check me out.">
-        <meta name="twitter:image" content="https://s3-us-west-2.amazonaws.com/feathercfm/assets/personal_card.jpg">
-        <link rel="shortcut icon" type="image/png" href="https://s3-us-west-2.amazonaws.com/feathercfm/assets/personal_logo.png"/>
-        <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
-		<script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/mousetrap/1.6.1/mousetrap.min.js"></script>
+        <meta name="twitter:title" content="Poke">
+        <meta name="twitter:description" content="Poke's aim is to provide designers & front-end developers with an easy-to-use button toolkit. ">
+        <meta name="twitter:image" content="http://i.imgur.com/d21NJPt.png">
+        <link rel="shortcut icon" type="image/png" href="http://i.imgur.com/d21NJPt.png"/>
         <style>
         	body{
         		background-color: #FFF;
@@ -30,12 +27,6 @@
             @font-face {
                 font-family: 'Apercu';
                 src: local('Apercu'), url('https://s3-us-west-2.amazonaws.com/feathercfm/assets/Apercu.otf') format('opentype');
-            }
-
-        	.center {
-                display: block;
-                margin-left: auto;
-                margin-right: auto;
             }
 
         	.tag{
@@ -95,77 +86,10 @@
                 }
             }
 
-            .typed-cursor{
-				opacity: 1;
-				-webkit-animation: blink 0.7s infinite;
-				-moz-animation: blink 0.7s infinite;
-				animation: blink 0.7s infinite;
-			}
-			@keyframes blink{
-				0% { opacity:1; }
-				50% { opacity:0; }
-				100% { opacity:1; }
-			}
-			@-webkit-keyframes blink{
-				0% { opacity:1; }
-				50% { opacity:0; }
-				100% { opacity:1; }
-			}
-			@-moz-keyframes blink{
-				0% { opacity:1; }
-				50% { opacity:0; }
-				100% { opacity:1; }
-			}
-
-			*:focus{
-			  outline: none;
-			}
-
-			.navigation{
-			  top: 0;
-			  position: fixed;
-			  height: 100px;
-			  width: 100%;
-			  background-color: #123fff;
-			}
-
-			.button{
-			  background-color: #FF3C49;
-			  border-bottom: 5px solid #b72f34;
-			  border-radius: 6px;
-			  color: #fff;
-			  font-family: 'Lato', sans-serif;
-			  font-size: 15pt;
-			  text-align: center;
-			  padding: 14px 46px;
-			  cursor: pointer;
-			  user-select: none;
-			  -webkit-user-select: none;
-			  margin-top: 25px;
-			  margin-bottom: 25px;
-			}
-
-			.button.hover{
-			  opacity: .7;
-			}
-
-			.button:active{
-			  margin-top: 28px;
-			  border-bottom: 2px solid #b72f34;
-			}
-
 			.center{
 			  display: block;
 			  margin-left: auto;
 			  margin-right: auto;
-			}
-
-			.navbar{
-			  width: 100%;
-			  height: 75px;
-			  background-color: #444;
-			  position: fixed;
-			  top: 0;
 			}
 
 			.first-container{
@@ -195,13 +119,8 @@
 			<div style="display:block;height:150px;"></div>
 		</p>
 
-		<div id="app"></div>
-     	<script src="main.js"></script>
      	<a href="https://js.org" target="_blank" title="JS.ORG | JavaScript Community">
 		<img src="https://logo.js.org/dark_horz.png" width="102" alt="JS.ORG Logo"/></a>
 		<!-- alternatives [bright|dark]_[horz|vert|tiny].png (width[horz:102,vert:50,tiny:77]) -->
 	</body>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.1/react-dom.js"></script>
-
 </html>

@@ -48,7 +48,8 @@ You can contribute your own sets, Poke currently has 2 available sets:
   
 `vanilla` - The basic Poke styling  
 `medium` - Mimicking the Medium.com button set  
-  
+`spotify` - Mimicking the Spotify button set  
+
 #### States
   
 Poke relies on you passing an appropriate keyword into the `state` prop.  

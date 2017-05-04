@@ -20,13 +20,17 @@ You can use Poke via the RawGit CDN: `https://rawgit.com/gregjw/poke/master/poke
 
 
 ```
-import Poke from './src/Poke.js';
+import React from 'react';
+import {render} from 'react-dom';
+import Poke from './Poke.js';
 
 function App(){
   return (
     <div>
-      <Poke set="vanilla" state="primary" text="Test"/>
-      <Poke set="medium" state="primary" text="Test"/>
+      <Poke set="vanilla" type="primary" text="Test"/>
+      <Poke set="vanilla" type="secondary" text="Test"/>
+      <Poke set="vanilla" type="tertiary" text="Test"/>
+      <Poke set="vanilla" type="warning" text="Test"/>
     </div>
   );
 }
@@ -42,8 +46,8 @@ These keywords affects what type of button you get from the set:
    
 `primary` - The primary button from the button set  
 `secondary` - The secondary button from the button set  
+`tertiary` - The tertiary button from the button set   
 `warning` - The warning/danger button from the button set  
-`disabled` - The inactive/disabled button from the button set  
   
 To specify which set you want to use, just pass along the sets name in the `set` prop.  
 You can contribute your own sets, Poke currently has 2 available sets:  
@@ -71,36 +75,53 @@ import styled from 'styled-components';
 
 const PrimaryButton = styled.button`
   border: none;  
-  background: palevioletred;
+  background: #2C3979;
   color: white;
-  font-size: 1em;
+  font-size: 1.2em;
   margin: 1em;
   position: relative;
   padding: 0.75em 2em;
-  border-radius: 3px;
-`;
-
-const PushButton = styled(PrimaryButton)`
+  border-radius: 5px;
   transition: .2s;
 
   &:active{
     transition: .2s;
-    box-shadow: inset 0 0px 8px rgba(0,0,0,.75);
+    box-shadow: inset 0 0px 10px rgba(0,0,0,1);
   }
-`;
-
-const HoverButton = styled(PrimaryButton)`
-  transition: .2s;
 
   &:hover{
-    transition: .2s;
-    box-shadow: 0 0px 10px rgba(0,0,0,.75);
+    opacity: .9;
   }
 `;
 
-const DisabledButton = styled(PrimaryButton)`
+const SecondaryButton = styled(PrimaryButton)`
+  background: #1F93ED;
+  &:hover{
+    box-shadow:rgba(0, 0, 0, 0.3) 0 7.5px 7.5px 0;
+    -webkit-box-shadow:rgba(0, 0, 0, 0.3) 0 7.5px 7.5px 0;
+    -moz-box-shadow:rgba(0, 0, 0, 0.3) 0 7.5px 7.5px 0;
+  }
+
+  &:active{
+    box-shadow: none;
+  } 
+`;
+
+const TertiaryButton = styled(PrimaryButton)`
   background: grey;
-  opacity: .2;
+  opacity: .5;
+
+  &:hover{
+    opacity: .3;
+  }
+`;
+
+const WarningButton = styled(PrimaryButton)`
+  transition: .2s;
+  background: crimson;
+  &:hover{
+    transition: .2s;
+  }
 `;
 
 function Button(props) {
@@ -110,11 +131,23 @@ function Button(props) {
         {props.text}
       </PrimaryButton>
     );
-  } else if(props.type == "push") {
+  } else if(props.type == "secondary") {
     return (
-      <PushButton>
+      <SecondaryButton>
         {props.text}
-      </PushButton>
+      </SecondaryButton>
+    ); 
+  } else if(props.type == "tertiary") {
+    return (
+      <TertiaryButton>
+        {props.text}
+      </TertiaryButton>
+    ); 
+  } else if(props.type == "warning") {
+    return (
+      <WarningButton>
+        {props.text}
+      </WarningButton>
     ); 
   }
 }
@@ -129,12 +162,14 @@ You can define a new Component and extend a predefined component.
 In this example, our predefined component is `PrimaryButton`:  
   
 ```
-const PushButton = styled(PrimaryButton)`
-  transition: .2s;
-
+const SecondaryButton = styled(PrimaryButton)`
+  background: grey;
+  opacity: .2;
+  
   &:active{
     transition: .2s;
     box-shadow: inset 0 0px 8px rgba(0,0,0,.75);
   }
 `;
+
 ```

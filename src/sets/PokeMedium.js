@@ -5,36 +5,37 @@ const PrimaryButton = styled.button`
   border: none;  
   background: rgb(2, 184, 117);
   color: white;
-  font-size: 1em;
+  font-size: 1.1em;
   margin: 1em;
   position: relative;
   padding: 0.75em 2em;
-  border-radius: 3px;
-  transition: .2s;
-
-  &:active{
-    transition: .2s;
-    box-shadow: inset 0 0px 8px rgba(0,0,0,.75);
-  }
+  border-radius: 50px;
 `;
 
 const SecondaryButton = styled(PrimaryButton)`
-  background: grey;
-  opacity: .2;
+  background: transparent;
+  border: 1px solid rgb(2, 184, 117);
+  color: rgb(2, 184, 117);
+`;
+
+const TertiaryButton = styled(PrimaryButton)`
+  background: rgb(250, 250, 250);
+  border: 1px solid rgb(240, 240, 240);
+  color: rgba(0, 0, 0, 0.44);
+  border-radius: 3px;
 `;
 
 const WarningButton = styled(PrimaryButton)`
+  background: transparent;
+  border: 1px solid lightgrey;
+  color: lightgrey;
   transition: .2s;
 
   &:hover{
     transition: .2s;
-    box-shadow: 0 0px 10px rgba(0,0,0,.75);
+    border: 1px solid grey;
+    color: grey;
   }
-`;
-
-const DisabledButton = styled(PrimaryButton)`
-  background: grey;
-  opacity: .2;
 `;
 
 function Button(props) {
@@ -50,17 +51,17 @@ function Button(props) {
         {props.text}
       </SecondaryButton>
     ); 
+  } else if(props.type == "tertiary") {
+    return (
+      <TertiaryButton>
+        {props.text}
+      </TertiaryButton>
+    ); 
   } else if(props.type == "warning") {
     return (
       <WarningButton>
         {props.text}
       </WarningButton>
-    ); 
-  } else if(props.type == "disabled") {
-    return (
-      <DisabledButton>
-        {props.text}
-      </DisabledButton>
     ); 
   }
 }

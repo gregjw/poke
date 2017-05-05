@@ -15,9 +15,8 @@ The ramp for front-end basics is getting shorter to shorter and I thought that a
 
 We want to emphasise that Poke is an evolving codebase & completely open design project, please feel free to submit a pull request and contribute your own button sets.
 
-## Usage
-You can use Poke via the RawGit CDN: `https://rawgit.com/gregjw/poke/master/poke.css`
-
+## Usage 
+Here is an example of how you could use Poke in your projects.
 
 ```
 import React from 'react';

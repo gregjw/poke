@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import Vanilla from './sets/PokeVanilla.js';
-import Medium from './sets/PokeMedium.js';
-import Reddit from './sets/PokeReddit.js';
+import Vanilla from './PokeVanilla.js';
+import Medium from './PokeMedium.js';
+import Spotify from './PokeSpotify.js';
 
 function Poke(props) {
   if(props.set == "vanilla"){
@@ -14,9 +14,9 @@ function Poke(props) {
     return (
       <Medium type={props.type} text={props.text}/>
     );
-  } else if(props.set == "reddit"){
+  } else if(props.set == "spotify"){
     return (
-      <Reddit type={props.type} text={props.text}/>
+      <Spotify type={props.type} text={props.text}/>
     );
   }
 }

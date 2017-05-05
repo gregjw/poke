@@ -11,7 +11,7 @@ Poke is a component library specifically for buttons, **built on top of [styled-
 ## What's Poke?
 Poke's aim is to provide designers & front-end developers with an easy-to-use button toolkit.  
   
-The ramp for front-end basics is getting shorter to shorter and the team at [Feather](https://feather-cfm.com) thought that an incredibly specific component library would be pretty useful for developers, in the age of [Bootstrap](https://github.com/twbs/bootstrap) and [Foundation](https://github.com/zurb/foundation-sites), where the majority of developers are used to having a highly-usable tool at their fingertips within seconds.
+The ramp for front-end basics is getting shorter to shorter and I thought that an incredibly specific component library would be pretty useful for developers, in the age of [Bootstrap](https://github.com/twbs/bootstrap) and [Foundation](https://github.com/zurb/foundation-sites), where the majority of developers are used to having a highly-usable tool at their fingertips within seconds.
 
 We want to emphasise that Poke is an evolving codebase & completely open design project, please feel free to submit a pull request and contribute your own button sets.
 
@@ -48,7 +48,8 @@ You can contribute your own sets, Poke currently has 2 available sets:
   
 `vanilla` - The basic Poke styling  
 `medium` - Mimicking the Medium.com button set  
-  
+`spotify` - Mimicking the Spotify button set  
+
 #### States
   
 Poke relies on you passing an appropriate keyword into the `state` prop.  
